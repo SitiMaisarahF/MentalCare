@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti Maisarah Binti Faizal | Student e-Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f3f4f6; /* Light background */
+            --primary-color: #4b3c6c; /* Soft purple */
+            --accent-color: #6a8e3f; /* Soft green */
+            --text-main: #2c2c2c; /* Dark text */
+            --text-muted: #636b6f; /* Muted text */
+            --border-color: #d3d9d0; /* Light border */
+            --nav-bg: rgba(243, 244, 246, 0.85); /* Semi-transparent background */
+            --shadow: 0 8px 20px rgba(75, 60, 108, 0.1); /* Shadow */
+            --transition: all 0.3s ease; /* Transition effect */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 20px;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 10px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: var(--shadow);
+            margin: 10px 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 56.25%;
+            background-color: #000;
+            margin: 10px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#labs">Labs</a>
+        <a href="#projects">Projects</a>
+        <a href="#reflection">Reflection</a>
+        <a href="#skills">Skills</a>
+        <a href="#resources">Resources</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Siti Maisarah Binti Faizal</h1>
+    <p><strong>Matric No:</strong> A208810</p>
+    <p><strong>Programme:</strong> TTTM2213 PENGATURCARAAN APLIKASI MUDAH ALIH</p>
+    <p><strong>Instructor:</strong> Dr. Rimaniza Binti Zainal Abidin</p>
+    <p>This portfolio showcases a comprehensive learning journey in Android mobile application development undertaken throughout the TTTM2213 course. Over the semester, development progressed from implementing foundational user interfaces to integrating complex architectures, local persistent storage, and hardware sensors. The practical skills culminated in the creation of 'MentalCare,' a dedicated application designed to support personal well-being and streamline mental health resource tracking.</p>
+</section>
+
+<section id="labs">
+    <h2>Labs</h2>
+    <div class="card">
+        <h3>Lab 1 (UI)</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/nyrFYIJph60" title="Lab 1 Video" allowfullscreen></iframe>
+        </div>
+        <p>Learned the fundamentals of constructing modern, declarative user interfaces using Jetpack Compose. This lab emphasized layout components like Rows, Columns, and Boxes to align UI elements correctly while ensuring adaptivity across varying screen dimensions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lab 2 (Interaction)</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lwzRMxDuOEQ" title="Lab 2 Video" allowfullscreen></iframe>
+        </div>
+        <p>Focused on managing interactive states, processing user input events, and dynamically modifying the UI in response to user actions. Gained a solid understanding of how state hoisting and mutable states drive reactivity in modern Android development.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lab 3 (Material Design)</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/GXBK452L34o" title="Lab 3 Video" allowfullscreen></iframe>
+        </div>
+        <p>Integrated official Material 3 Design principles to standardize color themes, typography, and shape styling across the application components. This structure improved the overall visual aesthetics and provided a highly consistent, professional user experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lab 4 (Navigation)</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/jI6V-bINKwQ" title="Lab 4 Video" allowfullscreen></iframe>
+        </div>
+        <p>Implemented multi-screen navigation using the Jetpack Compose Navigation component, establishing a clean, type-safe navigation graph. Mastered the process of passing data arguments securely between destination routes and handling the back stack effectively.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lab 5 (Room)</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/stNPXjcTDZ4" title="Lab 5 Video" allowfullscreen></iframe>
+        </div>
+        <p>Explored local persistence by integrating the Room database library to execute robust CRUD operations on structured data. Successfully managed Data Access Objects (DAOs), database entities, and asynchronous data streams using Kotlin Coroutines and Flow.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>MentalCare</h3>
+        <p><strong>Problem Statement:</strong> Individuals seeking to improve their mental health often lack a consolidated, private application to log daily moods and organize immediate coping resources, resulting in inconsistent self-monitoring habits.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/smnLtO3f4zo" title="MentalCare Video" allowfullscreen></iframe>
+        </div>
+        <button><a href="https://drive.google.com/file/d/1_8-EATLgsDg7ogh8ZB2IjS2ZXFimiB0V/view?usp=sharing">View on GitHub</a></button>
+        <p>Developed core architectural workflows by connecting basic multi-screen navigation to operational components. Learned the importance of structured application state management and how to handle user interface inputs without degrading app performance.</p>
+    </div>
+
+    <div class="card">
+        <h3>MentalCare (Advanced)</h3>
+        <p><strong>Problem Statement:</strong> Static wellness tracking apps lack real-time context and secure cloud backup, making it difficult for users to access synchronized mental health records or engage interactively with their immediate environmental surroundings.</p>
+        <div class="video-container">
+            <iframe src="LINK" title="MentalCare Advanced Video" allowfullscreen></iframe>
+        </div>
+        <button><a href="LINK">View on GitHub</a></button>
+        <p>Successfully integrated hardware sensors to track contextual user movement alongside RESTful web APIs to fetch external health tips dynamically. Overcoming configuration challenges with cloud synchronization significantly enhanced my architectural debugging skills and understanding of background threads.</p>
+    </div>
+</section>
+
+<section id="reflection">
+    <h2>Reflection</h2>
+    <p>This entire course provided an immersive hands-on evolution from a foundational learner to an adaptable mobile application developer capable of building complex Android architectures. Overcoming technical hurdles related to local database reactivity and cloud-based data integration taught me how to read comprehensive documentation and debug system logs systematically. Developing the MentalCare application solidified my engineering mindset, teaching me to prioritize clean architecture and user-centric design when mapping technology to real-world social impact goals.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills & Tech Stack</h2>
+    <p>Kotlin, Jetpack Compose, Material Design 3, Room Database, Jetpack Navigation, Retrofit API Client, Android Sensor Framework (Step Counter/Biometrics), Firebase Firestore, Kotlin Coroutines & Flow, MVVM Architecture.</p>
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+    <p><strong>APIs / Libraries:</strong> Android Jetpack libraries (Compose, Navigation, Room, Lifecycle), Retrofit2 for REST API networking, OkHttp3 logging interceptor, and Google Play Services Sensor API.</p>
+    <p><strong>Acknowledgements:</strong> Acknowledge the instructional guidance provided by Dr. Rimaniza Binti Zainal Abidin, the official Android Developer Documentation, and generative AI assistance for refactoring code blocks and optimizing database query structures.</p>
+</section>
+
+<footer>
+    <p>Siti Maisarah Binti Faizal | Matric No: A208810 | Year: 2023</p>
+</footer>
+
+</body>
+</html>
