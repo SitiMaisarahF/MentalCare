@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siti Maisarah Binti Faizal | Student e-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f3f4f6; /* Light background */
-            --primary-color: #4b3c6c; /* Soft purple */
-            --accent-color: #6a8e3f; /* Soft green */
-            --text-main: #2c2c2c; /* Dark text */
-            --text-muted: #636b6f; /* Muted text */
-            --border-color: #d3d9d0; /* Light border */
-            --nav-bg: rgba(243, 244, 246, 0.85); /* Semi-transparent background */
-            --shadow: 0 8px 20px rgba(75, 60, 108, 0.1); /* Shadow */
-            --transition: all 0.3s ease; /* Transition effect */
+            /* Theme tailored to SDG 3 (Good Health & Well-being) - Fresh emerald greens and deep slate accents */
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #ecfdf5;
+            --secondary: #0284c7;
+            --secondary-light: #e0f2fe;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --nav-height: 70px;
         }
 
         * {
@@ -23,63 +31,217 @@
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
         }
 
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Fixed Elegant Navigation Bar */
         header {
             position: sticky;
             top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
             z-index: 1000;
-            background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 10px 20px;
-            box-shadow: var(--shadow);
         }
 
         nav {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            padding: 10px;
-            transition: var(--transition);
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        section {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
 
-        h1, h2, h3 {
-            color: var(--primary-color);
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Base Section Layout */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            position: relative;
+            letter-spacing: -1px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Home / Hero Section Layout */
+        #home {
+            padding-top: 8rem;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-intro {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Profile Details Side Box */
+        .meta-card {
+            background-color: var(--white);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .meta-item {
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 1.25rem;
+        }
+
+        .meta-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* SDG Accent Box */
+        .sdg-box {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #e4fbf2 0%, #cbf7e6 100%);
+            border-radius: 16px;
+            border-left: 5px solid var(--primary);
+            margin-top: 2rem;
+        }
+
+        .sdg-box h4 {
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Content Card Grid Framework */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
-            background: #fff;
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: var(--shadow);
-            margin: 10px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Modern Video Container */
         .video-container {
             position: relative;
-            padding-top: 56.25%;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect */
             background-color: #000;
-            margin: 10px 0;
         }
 
         .video-container iframe {
@@ -91,30 +253,173 @@
             border: 0;
         }
 
-        button {
-            background-color: var(--accent-color);
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
+        .card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-        button a {
-            color: #fff;
+        .card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Highlight Block for Problem Statements */
+        .problem-statement {
+            background-color: #fff1f2;
+            border-left: 3px solid #f43f5e;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #9f1239;
+        }
+
+        .problem-statement strong {
+            color: #4c0519;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Actions Elements */
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--dark);
+            color: var(--white);
             text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            transition: background-color 0.2s ease;
         }
 
-        button:hover {
-            background-color: var(--primary-color);
+        .btn-github:hover {
+            background-color: #000000;
         }
 
+        /* Large Focus Blocks */
+        .focus-box {
+            background-color: var(--white);
+            padding: 3.5rem;
+            border-radius: 24px;
+            box-shadow: var(--card-shadow);
+            border-left: 6px solid var(--primary);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .focus-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        /* Tag Pill Framework */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-badge {
+            background-color: var(--white);
+            color: var(--dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .skill-badge:hover {
+            border-color: var(--primary);
+            color: var(--primary-dark);
+            background-color: var(--primary-light);
+        }
+
+        /* Resources Layout Elements */
+        .resources-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .resource-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .resource-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .resource-card p {
+            color: var(--text-main);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Footer System */
         footer {
-            background-color: var(--primary-color);
-            color: #fff;
+            background-color: var(--dark);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 20px;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            #home {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding-top: 4rem;
+            }
+            .resources-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Accessible styling abstraction */
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .focus-box {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -122,107 +427,194 @@
 
 <header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#labs">Labs</a>
-        <a href="#projects">Projects</a>
-        <a href="#reflection">Reflection</a>
-        <a href="#skills">Skills</a>
-        <a href="#resources">Resources</a>
+        <a href="#home" class="logo">SM.Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
     </nav>
 </header>
 
-<section id="home">
-    <h1>Siti Maisarah Binti Faizal</h1>
-    <p><strong>Matric No:</strong> A208810</p>
-    <p><strong>Programme:</strong> TTTM2213 PENGATURCARAAN APLIKASI MUDAH ALIH</p>
-    <p><strong>Instructor:</strong> Dr. Rimaniza Binti Zainal Abidin</p>
-    <p>This portfolio showcases a comprehensive learning journey in Android mobile application development undertaken throughout the TTTM2213 course. Over the semester, development progressed from implementing foundational user interfaces to integrating complex architectures, local persistent storage, and hardware sensors. The practical skills culminated in the creation of 'MentalCare,' a dedicated application designed to support personal well-being and streamline mental health resource tracking.</p>
-</section>
-
-<section id="labs">
-    <h2>Labs</h2>
-    <div class="card">
-        <h3>Lab 1 (UI)</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/nyrFYIJph60" title="Lab 1 Video" allowfullscreen></iframe>
+<main>
+    <section id="home">
+        <div>
+            <span class="hero-badge">Course e-Portfolio</span>
+            <h1 class="hero-title">Mobile Application Development</h1>
+            <p class="hero-intro">This portfolio showcases a comprehensive learning journey in Android mobile application development undertaken throughout the TTTM2213 course. Over the semester, development progressed from implementing foundational user interfaces to integrating complex architectures, local persistent storage, and hardware sensors. The practical skills culminated in the creation of 'MentalCare,' a dedicated application designed to support personal well-being and streamline mental health resource tracking.</p>
+            
+            <div class="sdg-box">
+                <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+                    SDG 3 Impact Framework: Good Health & Well-Being
+                </h4>
+                <p>Addresses critical accessibility gaps by providing users with intuitive, immediate digital tools to track, monitor, and manage their daily mental health status.</p>
+            </div>
         </div>
-        <p>Learned the fundamentals of constructing modern, declarative user interfaces using Jetpack Compose. This lab emphasized layout components like Rows, Columns, and Boxes to align UI elements correctly while ensuring adaptivity across varying screen dimensions.</p>
-    </div>
 
-    <div class="card">
-        <h3>Lab 2 (Interaction)</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/lwzRMxDuOEQ" title="Lab 2 Video" allowfullscreen></iframe>
+        <div class="meta-card">
+            <div class="meta-item">
+                <span class="meta-label">Developer Name</span>
+                <span class="meta-value">Siti Maisarah Binti Faizal</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Matric Number</span>
+                <span class="meta-value">A208810</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Programme Modules</span>
+                <span class="meta-value">TTTM2213 PENGATURCARAAN APLIKASI MUDAH ALIH</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Course Instructor</span>
+                <span class="meta-value">Dr. Rimaniza Binti Zainal Abidin</span>
+            </div>
         </div>
-        <p>Focused on managing interactive states, processing user input events, and dynamically modifying the UI in response to user actions. Gained a solid understanding of how state hoisting and mutable states drive reactivity in modern Android development.</p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h3>Lab 3 (Material Design)</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/GXBK452L34o" title="Lab 3 Video" allowfullscreen></iframe>
+    <section id="labs">
+        <h2 class="section-title">Laboratory Milestones</h2>
+        <div class="grid-container">
+            
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/nyrFYIJph60" title="Lab 1 Video Progression" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>Lab 1 (UI)</h3>
+                    <p class="card-desc">Learned the fundamentals of constructing modern, declarative user interfaces using Jetpack Compose. This lab emphasized layout components like Rows, Columns, and Boxes to align UI elements correctly while ensuring adaptivity across varying screen dimensions.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lwzRMxDuOEQ" title="Lab 2 Video Progression" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>Lab 2 (Interaction)</h3>
+                    <p class="card-desc">Focused on managing interactive states, processing user input events, and dynamically modifying the UI in response to user actions. Gained a solid understanding of how state hoisting and mutable states drive reactivity in modern Android development.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/GXBK452L34o" title="Lab 3 Video Progression" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>Lab 3 (Material Design)</h3>
+                    <p class="card-desc">Integrated official Material 3 Design principles to standardize color themes, typography, and shape styling across the application components. This structure improved the overall visual aesthetics and provided a highly consistent, professional user experience.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jI6V-bINKwQ" title="Lab 4 Video Progression" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>Lab 4 (Navigation)</h3>
+                    <p class="card-desc">Implemented multi-screen navigation using the Jetpack Compose Navigation component, establishing a clean, type-safe navigation graph. Mastered the process of passing data arguments securely between destination routes and handling the back stack effectively.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/stNPXjcTDZ4" title="Lab 5 Video Progression" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>Lab 5 (Room)</h3>
+                    <p class="card-desc">Explored local persistence by integrating the Room database library to execute robust CRUD operations on structured data. Successfully managed Data Access Objects (DAOs), database entities, and asynchronous data streams using Kotlin Coroutines and Flow.</p>
+                </div>
+            </article>
+
         </div>
-        <p>Integrated official Material 3 Design principles to standardize color themes, typography, and shape styling across the application components. This structure improved the overall visual aesthetics and provided a highly consistent, professional user experience.</p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h3>Lab 4 (Navigation)</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/jI6V-bINKwQ" title="Lab 4 Video" allowfullscreen></iframe>
+    <section id="projects">
+        <h2 class="section-title">Core Projects</h2>
+        <div class="grid-container">
+            
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/smnLtO3f4zo" title="MentalCare Architecture Stream" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>MentalCare (MVP Setup)</h3>
+                    <div class="problem-statement">
+                        <strong>Problem Statement</strong>
+                        Individuals seeking to improve their mental health often lack a consolidated, private application to log daily moods and organize immediate coping resources, resulting in inconsistent self-monitoring habits.
+                    </div>
+                    <p class="card-desc">Developed core architectural workflows by connecting basic multi-screen navigation to operational components. Learned the importance of structured application state management and how to handle user interface inputs without degrading app performance.</p>
+                    <a href="https://drive.google.com/file/d/1_8-EATLgsDg7ogh8ZB2IjS2ZXFimiB0V/view?usp=sharing" target="_blank" class="btn-github">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed?listType=search&list=MentalCare+Android+App" title="MentalCare Implementation Framework" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>MentalCare (Advanced Feature Set)</h3>
+                    <div class="problem-statement">
+                        <strong>Problem Statement</strong>
+                        Static wellness tracking apps lack real-time context and secure cloud backup, making it difficult for users to access synchronized mental health records or engage interactively with their immediate environmental surroundings.
+                    </div>
+                    <p class="card-desc">Successfully integrated hardware sensors to track contextual user movement alongside RESTful web APIs to fetch external health tips dynamically. Overcoming configuration challenges with cloud synchronization significantly enhanced my architectural debugging skills and understanding of background threads.</p>
+                    <a href="#" class="btn-github">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </article>
+
         </div>
-        <p>Implemented multi-screen navigation using the Jetpack Compose Navigation component, establishing a clean, type-safe navigation graph. Mastered the process of passing data arguments securely between destination routes and handling the back stack effectively.</p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h3>Lab 5 (Room)</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/stNPXjcTDZ4" title="Lab 5 Video" allowfullscreen></iframe>
+    <section id="reflection">
+        <h2 class="section-title">Course Reflection</h2>
+        <div class="focus-box">
+            <p>This entire course provided an immersive hands-on evolution from a foundational learner to an adaptable mobile application developer capable of building complex Android architectures. Overcoming technical hurdles related to local database reactivity and cloud-based data integration taught me how to read comprehensive documentation and debug system logs systematically. Developing the MentalCare application solidified my engineering mindset, teaching me to prioritize clean architecture and user-centric design when mapping technology to real-world social impact goals.</p>
         </div>
-        <p>Explored local persistence by integrating the Room database library to execute robust CRUD operations on structured data. Successfully managed Data Access Objects (DAOs), database entities, and asynchronous data streams using Kotlin Coroutines and Flow.</p>
-    </div>
-</section>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>MentalCare</h3>
-        <p><strong>Problem Statement:</strong> Individuals seeking to improve their mental health often lack a consolidated, private application to log daily moods and organize immediate coping resources, resulting in inconsistent self-monitoring habits.</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/smnLtO3f4zo" title="MentalCare Video" allowfullscreen></iframe>
+    <section id="skills">
+        <h2 class="section-title">Skills & Tech Stack</h2>
+        <div class="skills-container">
+            <span class="skill-badge">Kotlin</span>
+            <span class="skill-badge">Jetpack Compose</span>
+            <span class="skill-badge">Material Design 3</span>
+            <span class="skill-badge">Room Database</span>
+            <span class="skill-badge">Jetpack Navigation</span>
+            <span class="skill-badge">Retrofit API Client</span>
+            <span class="skill-badge">Android Sensor Framework (Step Counter/Biometrics)</span>
+            <span class="skill-badge">Firebase Firestore</span>
+            <span class="skill-badge">Kotlin Coroutines & Flow</span>
+            <span class="skill-badge">MVVM Architecture</span>
         </div>
-        <button><a href="https://drive.google.com/file/d/1_8-EATLgsDg7ogh8ZB2IjS2ZXFimiB0V/view?usp=sharing">View on GitHub</a></button>
-        <p>Developed core architectural workflows by connecting basic multi-screen navigation to operational components. Learned the importance of structured application state management and how to handle user interface inputs without degrading app performance.</p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h3>MentalCare (Advanced)</h3>
-        <p><strong>Problem Statement:</strong> Static wellness tracking apps lack real-time context and secure cloud backup, making it difficult for users to access synchronized mental health records or engage interactively with their immediate environmental surroundings.</p>
-        <div class="video-container">
-            <iframe src="LINK" title="MentalCare Advanced Video" allowfullscreen></iframe>
+    <section id="resources">
+        <h2 class="section-title">Resources & Direct References</h2>
+        <div class="resources-layout">
+            <div class="resource-card">
+                <h3>APIs / Libraries</h3>
+                <p>Android Jetpack libraries (Compose, Navigation, Room, Lifecycle), Retrofit2 for REST API networking, OkHttp3 logging interceptor, and Google Play Services Sensor API.</p>
+            </div>
+            <div class="resource-card">
+                <h3>Acknowledgements</h3>
+                <p>Acknowledge the instructional guidance provided by Dr. Rimaniza Binti Zainal Abidin, the official Android Developer Documentation, and generative AI assistance for refactoring code blocks and optimizing database query structures.</p>
+            </div>
         </div>
-        <button><a href="LINK">View on GitHub</a></button>
-        <p>Successfully integrated hardware sensors to track contextual user movement alongside RESTful web APIs to fetch external health tips dynamically. Overcoming configuration challenges with cloud synchronization significantly enhanced my architectural debugging skills and understanding of background threads.</p>
-    </div>
-</section>
-
-<section id="reflection">
-    <h2>Reflection</h2>
-    <p>This entire course provided an immersive hands-on evolution from a foundational learner to an adaptable mobile application developer capable of building complex Android architectures. Overcoming technical hurdles related to local database reactivity and cloud-based data integration taught me how to read comprehensive documentation and debug system logs systematically. Developing the MentalCare application solidified my engineering mindset, teaching me to prioritize clean architecture and user-centric design when mapping technology to real-world social impact goals.</p>
-</section>
-
-<section id="skills">
-    <h2>Skills & Tech Stack</h2>
-    <p>Kotlin, Jetpack Compose, Material Design 3, Room Database, Jetpack Navigation, Retrofit API Client, Android Sensor Framework (Step Counter/Biometrics), Firebase Firestore, Kotlin Coroutines & Flow, MVVM Architecture.</p>
-</section>
-
-<section id="resources">
-    <h2>Resources</h2>
-    <p><strong>APIs / Libraries:</strong> Android Jetpack libraries (Compose, Navigation, Room, Lifecycle), Retrofit2 for REST API networking, OkHttp3 logging interceptor, and Google Play Services Sensor API.</p>
-    <p><strong>Acknowledgements:</strong> Acknowledge the instructional guidance provided by Dr. Rimaniza Binti Zainal Abidin, the official Android Developer Documentation, and generative AI assistance for refactoring code blocks and optimizing database query structures.</p>
-</section>
+    </section>
+</main>
 
 <footer>
-    <p>Siti Maisarah Binti Faizal | Matric No: A208810 | Year: 2023</p>
+    <p><strong>Siti Maisarah Binti Faizal</strong> | Matric No: <strong>A208810</strong> | Year: 2026</p>
 </footer>
 
 </body>
