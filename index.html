@@ -9,20 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Theme tailored to SDG 3 (Good Health & Well-being) - Fresh emerald greens and deep slate accents */
-            --primary: #059669;
-            --primary-dark: #047857;
-            --primary-light: #ecfdf5;
-            --secondary: #0284c7;
-            --secondary-light: #e0f2fe;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
+            /* Elegant, modern light purple palette */
+            --primary: #7c3aed;
+            --primary-dark: #6d28d9;
+            --primary-light: #f5f3ff;
+            --secondary: #a855f7;
+            --secondary-light: #fae8ff;
+            --dark: #1e1b4b;
+            --light: #faf5ff;
+            --text-main: #374151;
+            --text-muted: #6b7280;
+            --border-color: #e9d5ff;
             --white: #ffffff;
-            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-            --nav-height: 70px;
+            --card-shadow: 0 10px 30px -5px rgba(124, 58, 237, 0.05), 0 8px 15px -6px rgba(124, 58, 237, 0.05);
+            --nav-height: 75px;
         }
 
         * {
@@ -38,23 +38,25 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--light);
+            /* Pretty dynamic background blending subtle lavender hues */
+            background: linear-gradient(135deg, #fbfaff 0%, #f5efff 50%, #fbfaff 100%);
+            background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Fixed Elegant Navigation Bar */
+        /* Fixed Premium Navigation Bar */
         header {
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             height: var(--nav-height);
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(233, 213, 255, 0.4);
             z-index: 1000;
         }
 
@@ -70,7 +72,7 @@
 
         .logo {
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--primary);
             text-decoration: none;
             letter-spacing: -0.5px;
@@ -84,14 +86,17 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-main);
+            color: var(--dark);
             font-weight: 600;
             font-size: 0.95rem;
-            transition: color 0.2s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
 
         .nav-links a:hover {
             color: var(--primary);
+            background-color: var(--primary-light);
         }
 
         /* Base Section Layout */
@@ -115,15 +120,15 @@
             position: absolute;
             bottom: -10px;
             left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
+            width: 50px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 99px;
         }
 
         /* Home / Hero Section Layout */
         #home {
-            padding-top: 8rem;
+            padding-top: 6rem;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             gap: 4rem;
@@ -132,13 +137,14 @@
 
         .hero-badge {
             display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-light);
+            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f3e8ff 100%);
             color: var(--primary-dark);
             border-radius: 9999px;
             font-weight: 700;
             font-size: 0.85rem;
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(124, 58, 237, 0.15);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -160,16 +166,17 @@
 
         /* Profile Details Side Box */
         .meta-card {
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 24px;
             padding: 2.5rem;
             box-shadow: var(--card-shadow);
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(233, 213, 255, 0.6);
+            backdrop-filter: blur(10px);
         }
 
         .meta-item {
             margin-bottom: 1.25rem;
-            border-bottom: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f3e8ff;
             padding-bottom: 1.25rem;
         }
 
@@ -198,10 +205,11 @@
         /* SDG Accent Box */
         .sdg-box {
             padding: 1.5rem;
-            background: linear-gradient(135deg, #e4fbf2 0%, #cbf7e6 100%);
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
             border-radius: 16px;
             border-left: 5px solid var(--primary);
             margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.03);
         }
 
         .sdg-box h4 {
@@ -221,19 +229,21 @@
         }
 
         .card {
-            background-color: var(--white);
-            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--card-shadow);
             display: flex;
             flex-direction: column;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(233, 213, 255, 0.5);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px -12px rgba(124, 58, 237, 0.12);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         /* Modern Video Container */
@@ -241,7 +251,7 @@
             position: relative;
             width: 100%;
             padding-top: 56.25%; /* 16:9 Aspect */
-            background-color: #000;
+            background-color: #0f172a;
         }
 
         .video-container iframe {
@@ -254,14 +264,14 @@
         }
 
         .card-content {
-            padding: 2rem;
+            padding: 2.25rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .card h3 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--dark);
             margin-bottom: 1rem;
@@ -277,9 +287,9 @@
         /* Highlight Block for Problem Statements */
         .problem-statement {
             background-color: #fff1f2;
-            border-left: 3px solid #f43f5e;
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
+            border-left: 4px solid #f43f5e;
+            padding: 1.25rem;
+            border-radius: 12px;
             margin-bottom: 1.5rem;
             font-size: 0.9rem;
             color: #9f1239;
@@ -296,32 +306,36 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            margin-top: auto; /* Ensures button sticks to bottom of card content */
-            padding: 0.75rem 1.5rem;
-            background-color: var(--dark);
+            gap: 0.6rem;
+            margin-top: auto;
+            padding: 0.85rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
-            border-radius: 10px;
-            transition: background-color 0.2s ease;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+            transition: all 0.2s ease;
         }
 
         .btn-github:hover {
-            background-color: #000000;
+            opacity: 0.95;
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+            transform: translateY(-1px);
         }
 
         /* Large Focus Blocks */
         .focus-box {
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 3.5rem;
-            border-radius: 24px;
+            border-radius: 28px;
             box-shadow: var(--card-shadow);
             border-left: 6px solid var(--primary);
-            border-top: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid rgba(233, 213, 255, 0.5);
+            border-right: 1px solid rgba(233, 213, 255, 0.5);
+            border-bottom: 1px solid rgba(233, 213, 255, 0.5);
+            backdrop-filter: blur(10px);
         }
 
         .focus-box p {
@@ -338,14 +352,14 @@
         }
 
         .skill-badge {
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.9);
             color: var(--dark);
             padding: 0.75rem 1.5rem;
-            border-radius: 12px;
+            border-radius: 14px;
             font-weight: 600;
             font-size: 0.95rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
-            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(124, 58, 237, 0.02);
+            border: 1px solid rgba(233, 213, 255, 0.6);
             transition: all 0.2s ease;
         }
 
@@ -353,6 +367,7 @@
             border-color: var(--primary);
             color: var(--primary-dark);
             background-color: var(--primary-light);
+            transform: translateY(-2px);
         }
 
         /* Resources Layout Elements */
@@ -363,11 +378,12 @@
         }
 
         .resource-card {
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 2.5rem;
-            border-radius: 20px;
+            border-radius: 24px;
             box-shadow: var(--card-shadow);
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(233, 213, 255, 0.5);
+            backdrop-filter: blur(10px);
         }
 
         .resource-card h3 {
@@ -387,10 +403,10 @@
         footer {
             background-color: var(--dark);
             color: rgba(255, 255, 255, 0.6);
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem;
             text-align: center;
             font-size: 0.95rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         footer strong {
@@ -412,7 +428,7 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Accessible styling abstraction */
+                display: none;
             }
             .hero-title {
                 font-size: 2.5rem;
@@ -548,8 +564,8 @@
                     </div>
                     <p class="card-desc">Developed core architectural workflows by connecting basic multi-screen navigation to operational components. Learned the importance of structured application state management and how to handle user interface inputs without degrading app performance.</p>
                     <a href="https://drive.google.com/file/d/1_8-EATLgsDg7ogh8ZB2IjS2ZXFimiB0V/view?usp=sharing" target="_blank" class="btn-github">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        View on GitHub
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 5h3a1 1 0 0 1 1 1v3H18a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3.5v3.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V15H6a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3.5V6a1 1 0 0 1 1-1zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z"/></svg>
+                        View Project 1
                     </a>
                 </div>
             </article>
@@ -565,9 +581,9 @@
                         Static wellness tracking apps lack real-time context and secure cloud backup, making it difficult for users to access synchronized mental health records or engage interactively with their immediate environmental surroundings.
                     </div>
                     <p class="card-desc">Successfully integrated hardware sensors to track contextual user movement alongside RESTful web APIs to fetch external health tips dynamically. Overcoming configuration challenges with cloud synchronization significantly enhanced my architectural debugging skills and understanding of background threads.</p>
-                    <a href="https://sitimaisarahf.github.io/MaisarahProject2/" target="_blank" class="btn-github">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        View on GitHub
+                    <a href="https://drive.google.com/file/d/1amSAt-P3pXr9r2a9Phvj9C3t2Rk5ci-6/view?usp=sharing" target="_blank" class="btn-github">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5 5h3a1 1 0 0 1 1 1v3H18a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3.5v3.5a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V15H6a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3.5V6a1 1 0 0 1 1-1zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z"/></svg>
+                        View Project 2
                     </a>
                 </div>
             </article>
@@ -591,7 +607,7 @@
             <span class="skill-badge">Room Database</span>
             <span class="skill-badge">Jetpack Navigation</span>
             <span class="skill-badge">Retrofit API Client</span>
-            <span class="skill-badge">Android Sensor Framework (Step Counter/Biometrics)</span>
+            <span class="skill-badge">Android Sensor Framework</span>
             <span class="skill-badge">Firebase Firestore</span>
             <span class="skill-badge">Kotlin Coroutines & Flow</span>
             <span class="skill-badge">MVVM Architecture</span>
